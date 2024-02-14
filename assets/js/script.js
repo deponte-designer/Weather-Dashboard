@@ -164,3 +164,19 @@ function addToHistory(cityName) {
       updateHistoryDisplay();
     }
   }
+
+  // Function to update the display of search history
+function updateHistoryDisplay() {
+    $("#history").empty();
+  
+    // Retrieve the search history from local storage
+    const cityHistory = JSON.parse(localStorage.getItem("cityHistory")) || [];
+  
+    // Append each city button to the search history display
+    cityHistory.forEach((city) => {
+      $("#history").append(
+        `<button type="button" class="btn btn-secondary mb-2" data-city=${city.toLowerCase()}>${city}</button>`
+      );
+    });
+  }
+  
