@@ -1,3 +1,4 @@
+
 const apiKey = "e063538dbd7a64e6085495b882b71be5";
 
 // Function to fetch weather data by city name
@@ -65,7 +66,14 @@ function displayCurrentWeather(response) {
   temperatureParagraph.text(`Temperature: ${temperature} °C`);
   humidityParagraph.text(`Humidity: ${humidity} %`);
   windParagraph.text(`Wind Speed: ${windSpeed} m/s`);
-  currentDay.addClass("border, today-style");
+  currentDay.addClass("border today-style");
+  // currentDay.css({
+  //   "background-color": "#fff",
+  //   "padding": "20px",
+  //   "margin-bottom": "20px",
+  //   "border-radius": "8px",
+  //   "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)",})
+
 
   container.append(
     heading,
