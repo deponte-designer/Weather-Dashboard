@@ -86,3 +86,41 @@ function displayCurrentWeather(response) {
   }
 
   
+  // Function to display forecast data
+function displayForecast(response) {
+    const forecastSection = $("#forecast");
+    let currentDate = dayjs().startOf("day");
+  
+    const forecastList = response.list.filter(function (forecast) {
+      if (dayjs.unix(forecast.dt).startOf("day").isAfter(currentDate)) {
+        currentDate = dayjs.unix(forecast.dt).startOf("day");
+        return forecast;
+      }
+    });
+  
+    forecastSection.empty();
+  
+    forecastList.forEach(function (forecast) {
+      const date = dayjs.unix(forecast.dt).format("DD MMM, YYYY");
+      const icon = forecast.weather[0].icon;
+      const temperature = forecast.main.temp;
+      const humidity = forecast.main.humidity;
+      const wind = forecast.wind.speed;
+  
+      const forecastItem = `
+      <div class="col-lg mb-2">
+        <div class="card card-styles">
+          <div class="card-body">
+            <h5 class="card-title">${date}</h5>
+            <img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">
+            <p class="card-text">Temp: ${temperature} °C</p>
+            <p class="card-text">Wind: ${wind} m/s</p>
+            <p class="card-text">Humidity: ${humidity} %</p>
+          </div>
+        </div>
+      </div>
+    `;
+  
+      forecastSection.append(forecastItem);
+    });
+  }
