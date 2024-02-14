@@ -1,21 +1,20 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
-  }
+}
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-  .weather-header {
+.weather-header {
     background: linear-gradient(to left, #20084a, #3463bc);
     color: #fff;
-  }
+}
 
-  
 .card-styles {
     background-color: #050a4b;
     background: linear-gradient(#20084a 1%, #3463bc 180%);
@@ -23,4 +22,8 @@ h4 {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.hide {
+    display: none;
+}
