@@ -21,3 +21,18 @@ $.ajax({
       alert(`${cityName} doesn't exist`);
     });
 }
+
+// Event listener for the search form submission
+$("#search-form").on("submit", function (event) {
+    event.preventDefault();
+    // Get user input and trigger weather data retrieval
+    const userInput = $("#search-input");
+    const cityName = userInput.val().trim();
+  
+    if (cityName) {
+      getWeatherByCity(cityName);
+    }
+  
+    // Clear the input field
+    userInput.val("");
+  });
