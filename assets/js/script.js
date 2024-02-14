@@ -65,14 +65,7 @@ function displayCurrentWeather(response) {
   temperatureParagraph.text(`Temperature: ${temperature} °C`);
   humidityParagraph.text(`Humidity: ${humidity} %`);
   windParagraph.text(`Wind Speed: ${windSpeed} m/s`);
-  currentDay.addClass("border");
-  currentDay.css({
-    "background-color": "#fff",
-    "padding": "20px",
-    "margin-bottom": "20px",
-    "border-radius": "8px",
-    "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)",})
-
+  currentDay.addClass("border, today-style");
 
   container.append(
     heading,

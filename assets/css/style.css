@@ -15,6 +15,14 @@ h4 {
     color: #fff;
 }
 
+.today-style {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .card-styles {
     background-color: #050a4b;
     background: linear-gradient(#20084a 1%, #3463bc 180%);
