@@ -1,0 +1,38 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4, 
+  .h3 {
+    font-weight: bold;
+  }
+  
+  .weather-header {
+    background: linear-gradient(to left, #20084a, #3463bc);
+    color: #fff;
+  }
+  
+  .today-style {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-styles {
+    /* background: linear-gradient(#20084a 1%, #3463bc 80%); */
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .hide {
+    display: none;
+  }
