@@ -8,13 +8,13 @@ The Weather Dashboard is a web application that allows users to view the weather
 ## Overview
 
 This project aims to provide users with a simple and intuitive tool to access weather forecasts for different cities. By leveraging the OpenWeatherMap API, users can search for cities and view detailed weather information, including temperature, humidity, wind speed, and weather conditions for both current and future dates.
-
-
 <!-- 
+
+
 ## Demo
 
 ![Demo](./assets/images/weather-dashboard-demo.gif)
-Demo link: [Weather Dashboard Demo](#) 
+
 -->
 
 
@@ -27,12 +27,11 @@ Demo link: [Weather Dashboard Demo](#)
 - Retrieve geographical coordinates for a city using the OpenWeatherMap API.
 - Utilize localStorage to store persistent data and ensure a seamless user experience across sessions.
 
-<!--
+
 ## Screenshot
 
  ![Weather Dashboard Screenshot](./assets/images/weather-dashboard-screenshot.png) 
 *The above image illustrates an example of the Weather Dashboard displaying weather information for multiple cities, including current conditions and a 5-day forecast.*
--->
 
 
 ## Deployment
