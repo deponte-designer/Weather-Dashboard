@@ -180,3 +180,11 @@ function updateHistoryDisplay() {
     });
   }
   
+// Event listener for clicking on a city in the search history
+$("#history").on("click", "[data-city]", function () {
+    const cityName = $(this).attr("data-city");
+    getWeatherByCity(cityName);
+  });
+  
+  // Initialize the search history display on page load
+  updateHistoryDisplay(); 
