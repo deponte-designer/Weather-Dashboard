@@ -85,7 +85,7 @@ function displayCurrentWeather(response) {
     currentDay.append(container);
   }
 
-  
+
   // Function to display forecast data
 function displayForecast(response) {
     const forecastSection = $("#forecast");
@@ -123,4 +123,44 @@ function displayForecast(response) {
   
       forecastSection.append(forecastItem);
     });
+  }
+
+  // Function to add city to the search history
+function addToHistory(cityName) {
+    // Retrieve existing search history from local storage
+    const storedHistory = localStorage.getItem("cityHistory");
+    const capitalizedCityName =
+      cityName.toLowerCase().charAt(0).toUpperCase() +
+      cityName.toLowerCase().slice(1);
+  
+    let result = false;
+  
+    // Parse existing search history or initialize an empty array
+    const existingHistory = JSON.parse(storedHistory) || [];
+  
+    // Check if the city is already in the search history
+    if (Array.isArray(existingHistory)) {
+      for (let i = 0; i < existingHistory.length; i++) {
+        if (
+          existingHistory[i].toLowerCase() === capitalizedCityName.toLowerCase()
+        ) {
+          result = true;
+        }
+      }
+  
+      // Add the city to the search history if it's not already present
+      if (!result) {
+        existingHistory.unshift(capitalizedCityName);
+        localStorage.setItem("cityHistory", JSON.stringify(existingHistory));
+  
+        // Update the display of search history
+        updateHistoryDisplay();
+      }
+    } else {
+      // If no search history exists, create a new one
+      const newHistory = [capitalizedCityName];
+      localStorage.setItem("cityHistory", JSON.stringify(newHistory));
+  
+      updateHistoryDisplay();
+    }
   }
