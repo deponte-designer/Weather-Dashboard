@@ -2,3 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
   }
+
+  .weather-header {
+    background: linear-gradient(to left, #20084a, #3463bc);
+    color: #fff;
+  }
