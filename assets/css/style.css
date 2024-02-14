@@ -3,6 +3,13 @@ body {
     background-color: #f0f0f0;
   }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
   .weather-header {
     background: linear-gradient(to left, #20084a, #3463bc);
     color: #fff;
